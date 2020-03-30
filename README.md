@@ -1,6 +1,6 @@
 Homework 4 Web APIs: Houseplant Quiz
 Christina Leung
-live URL
+https://cgleungsf.github.io/HW4_Quiz/
 
 Description
     Do you have any houseplants? Test your knowledge with this 30 second quiz but be careful, every question that you answer incorrectly, will deduct 5 seconds from your timer. 
