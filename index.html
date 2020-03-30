@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houseplant Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+</head>
+
+<body>
+
+    <h1>Houseplant Quiz Challenge</h1>
+    <img src="./Assets/images/LindenLeaf.svg" alt="leaf" class=Leaf>
+    <div class="timeHead">Time: <span id="timer">0</span> </div>
+
+    <div class="scoreHead">Score: <span id="score">0</span> </div>
+
+    <div class="wrapper">
+        <div class="questionHolder">
+            <p>How much do you know about houseplants? Take this quiz to test your knowledge. Keep in mind that
+                incorrect
+                answers will penalize you by decreasing your time by five seconds!</p>
+            <button id="start">Start Quiz!</button>
+
+            <div id="questions" class="questions-hide">
+                <h2 id="question-title"></h2>
+
+                <button id="choiceOne" class="choices"></button>
+                <br>
+                <button id="choiceTwo" class="choices"></button>
+                <br>
+                <button id="choiceThree" class="choices"></button>
+                <br>
+                <button id="choiceFour" class="choices"></button>
+            </div>
+            <div class="end-screen">
+                <h2 id="endScore"></h2>
+                <button id="restart">Click here to try again</button>
+
+                <div class="initials">
+                    <form id="initial-form" method="POST">
+                        <label for="initial-text">Enter your initials to save your score</label>
+                        <input type="text" placeholder="Enter your initials here" name="initial-text"
+                            id="initial-text" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="scoreHolder">
+            <h2>Quiz Scores</h2>
+            <p>Number of times this quiz has been taken: <span id="initial-count">0</span></p>
+
+            <h4>Initials Score</h4>
+            <ul id="initial-list"></ul>
+            <ul id="score-list"></ul>
+        </div>
+    </div>
+
+<script src="./Assets/js/app.js"></script>
+
+</body>
+
+</html>

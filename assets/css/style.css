@@ -1,0 +1,119 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgb(115, 194, 194);
+}
+
+h1 {
+  text-align: center;
+  color: rgb(11, 59, 11);
+  padding: 20px;
+  z-index: 100;
+}
+
+.Leaf {
+  width: 80px;
+  position: absolute;
+  left: 6%;
+  display: inline-block;
+  top: 20%;
+  z-index: 10;
+}
+p {
+  z-index: 100;
+}
+.wrapper {
+  width: 80%;
+  margin: 5%;
+  padding: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timeHead {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  padding-right: 15%;
+  font-size: 24px;
+  text-align: center;
+  color: #000000;
+}
+#time {
+  right: 0;
+  padding-right: 30px;
+  padding-top: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.scoreHead {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  padding-left: 15%;
+  font-size: 24px;
+  text-align: center;
+  color: #000000;
+}
+#score {
+  left: 0;
+  padding-right: 30px;
+  padding-top: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+.choices {
+  background-color: rgb(49, 141, 103);
+  border: 1px solid #272626;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 40%;
+  display: block;
+  text-align: center;
+  margin: 5px;
+  border-bottom-left-radius: 50px;
+}
+
+.questions-hide {
+  text-align: center;
+}
+
+.end-screen {
+  text-align: center;
+}
+
+.questionHolder {
+  width: 70%;
+  background-color: rgb(164, 224, 164);
+  float: left;
+  border-radius: 5%;
+  padding: 20px;
+}
+
+.scoreHolder {
+  width: 30%;
+  background-color: rgb(102, 175, 102);
+  border-radius: 15%;
+  float: right;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 0;
+  color: white;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#initial-list {
+  display: inline-block;
+  padding-left: 50px;
+}
+
+#score-list {
+  display: inline-block;
+  padding-right: 50px;
+}
