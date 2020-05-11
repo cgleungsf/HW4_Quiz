@@ -202,7 +202,6 @@ function endQuiz() {
   restart.style.display = "initial";
   endScore.textContent = (`You got a score of ${scoreTracker} out of ${questions.length}!`);
   end.style.display = "block";
-  initialCountSpan.textContent++;
   restart.onclick = function () {
     restart.style.display = "none";
     end.style.display = "none";
@@ -219,6 +218,7 @@ function renderinitials(initialText) {
 
   score.textContent = scoreTracker;
   initial.textContent = initialText;
+  initialCountSpan.textContent++;
 
   scoreset.appendChild(initial);
   scoreset.appendChild(score);
