@@ -97,6 +97,7 @@ var questions = [// q = questions, c = choices, a = answer
 ];
 
 function startQuiz() {
+  $scoreReport.textContent=0;
   startButton.style.display = "none";  // removes Start Quiz Button;
   scoreTracker = 0;
   i = 0;
@@ -166,7 +167,6 @@ function quizQuestions() {
     }
   }
   else {
-    console.log("if statement for quiz questions");
     secondsLeft = 0;
     endQuiz();
   }
@@ -202,9 +202,7 @@ function endQuiz() {
   restart.style.display = "initial";
   endScore.textContent = (`You got a score of ${scoreTracker} out of ${questions.length}!`);
   end.style.display = "block";
-
-  renderinitials();
-
+  initialCountSpan.textContent++;
   restart.onclick = function () {
     restart.style.display = "none";
     end.style.display = "none";
@@ -212,24 +210,22 @@ function endQuiz() {
   }
 }
 
-function renderinitials() {
-  initialList.innerHTML = "";
-  scoreList.innerHTML = "";
-  initialCountSpan.textContent = initials.length;
+function renderinitials(initialText) {
+  var scoreset = document.createElement("div");
+  var initial = document.createElement("span");
+  initial.classList.add('initial-list');
+  var score = document.createElement("span");
+  score.classList.add('initial-list');
 
-  for (var i = 0; i < initials.length; i++) {
-    var initial = initials[i];
-    var li = document.createElement("li");
-    var sc = document.createElement("li");
-    li.setAttribute('data-index', i);
-    sc.setAttribute('data-index', i);
-    li.textContent = initial;
-    sc.textContent = scoreTracker;
-    initialList.appendChild(li);
-    scoreList.appendChild(sc);
-  }
+  score.textContent = scoreTracker;
+  initial.textContent = initialText;
+
+  scoreset.appendChild(initial);
+  scoreset.appendChild(score);
+  document.getElementById("scoreboard-container").appendChild(scoreset);
+
+
 }
-
 initialForm.addEventListener("submit", function (event) {
   event.preventDefault();
   var initialText = initialInput.value.trim();
@@ -242,18 +238,5 @@ initialForm.addEventListener("submit", function (event) {
     alert("Please enter up to three letters for your initials.");
     return;
   }
-  initials.push(initialText.toUpperCase());
-  initialInput.value = "";
-  renderinitials();
-
+  renderinitials(initialText.toUpperCase());
 });
-
-initialList.addEventListener('click', function (event) {
-  event.preventDefault();
-  var element = event.target;
-  if (element.matches("clearButton")) {
-    var index = element.parentElement.getAttribute('data-index');
-    initials.splice(index, 1);
-    renderinitials();
-  }
-})

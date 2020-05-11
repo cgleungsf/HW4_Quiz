@@ -90,7 +90,7 @@ p {
   background-color: rgb(164, 224, 164);
   float: left;
   border-radius: 5%;
-  padding: 20px;
+  padding: 30px;
 }
 
 .scoreHolder {
@@ -98,6 +98,7 @@ p {
   background-color: rgb(102, 175, 102);
   border-radius: 15%;
   float: right;
+  padding:20px;
 }
 
 ul li {
@@ -108,12 +109,11 @@ ul li {
   line-height: 1.5;
 }
 
-#initial-list {
-  display: inline-block;
-  padding-left: 50px;
+.initial-list {
+  padding-left: 20px;
 }
 
-#score-list {
-  display: inline-block;
+.score-list {
   padding-right: 50px;
 }
+
