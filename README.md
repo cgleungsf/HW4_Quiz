@@ -19,4 +19,4 @@ At the end of the quiz, feel free to retake the quiz and save your initials and 
  This assignment was helpful in getting practice creating and using a number of functions. Figuring out the logistics of the quiz and where to start was the main challenging aspect. 
 
 ## Screenshot
-![screenshot](./Assets/images/screenshot.JPG)
+![screenshot](./assets/images/screenshot.JPG)
